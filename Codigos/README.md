@@ -28,7 +28,21 @@ fun main() {
     println("$celsius graus Celsius equivalem a $fahrenheit graus Fahrenheit")
 }
 ```
+#### Fatorial em Kotlin
+```kotlin
+fun fatorial(n: Int): Long {
+    if (n < 0) {
+        throw IllegalArgumentException("Numero Negativo.")
+    }
+    return if (n == 0) 1 else (1..n).reduce { acc, i -> acc * i }
+}
 
+fun main() {
+    val numero = 5
+    val fatorial = fatorial(numero)
+    println("O fatorial de $numero é $fatorial") 
+}
+```
 #### Multiplicação de dois números
 ```kotlin
 fun main() {
